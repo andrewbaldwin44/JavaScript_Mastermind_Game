@@ -1,0 +1,241 @@
+body {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  margin-top: 5vh;
+  overflow-y: hidden;
+  background-color: #efebe9;
+}
+
+.master-code-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  box-shadow: 1px 1px 12px 5px gray;
+  height: 80px;
+  width: 300px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.master-code-peg {
+  font-size: inherit;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  background-color: white;
+}
+
+.board {
+  display: grid;
+  grid-auto-rows: repeat(10, 1fr);
+  height: 700px;
+  width: 400px;
+  background-color: #795548;
+  padding: 0 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px 5px #9e9e9e;
+}
+
+.row:not(:last-child) {
+  border-bottom: 5px solid black;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pegs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 60%;
+}
+
+.pegs-container:disabled .peg {
+  cursor: default;
+}
+
+.pegs-container:disabled {
+  cursor: none;
+}
+
+.pegsContainer:disabled {
+  background-color: purple;
+  cursor: none;
+}
+
+.clues-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.master-code-peg, .peg, .clue {
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.peg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.clue {
+  width: 10px;
+  height: 10px;
+  background-color: #eeeeee;
+}
+
+.open-instructions, .make-guess {
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.open-instructions {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.open-instructions:focus {
+  outline-color: dodgerblue;
+}
+
+.make-guess {
+  background-color: #9933CC;
+  padding: 20px 30px;
+  margin-top: 30px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 12px 2px gray;
+}
+
+.instructions-overlay {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+.instructions-container {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  height: 80%;
+  width: 90%;
+  background-color: white;
+  border: 10px solid black;
+  line-height: 1.4;
+  padding: 20px 20px;
+}
+
+.instructions-head {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.close-instructions {
+  position: absolute;
+  cursor: pointer;
+  font-size: 34px;
+  top: 0;
+  right: 10px;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+@media (max-height: 730px) {
+  body {
+    font-size: 2em;
+  }
+
+  .master-code-container {
+    justify-content: space-around;
+    height: 150px;
+    width: 600px;
+    margin: 80px 0;
+    padding: 0 10px;
+  }
+
+  .master-code-peg {
+    font-size: 50px;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .board {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  .peg, .clue {
+    border-width: 3px;
+  }
+
+  .peg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .clue {
+    width: 30px;
+    height: 30px;
+  }
+
+  .open-instructions {
+    top: 20px;
+    font-size: 2em;
+  }
+
+  .make-guess {
+    font-size: 2em;
+    width: 50vw;
+    height: 8vh;
+    margin-top: 80px;
+  }
+
+  .instructions-container {
+    font-size: 34px;
+    line-height: 2;
+  }
+
+  .instructions-head {
+    font-size: 1.2em;
+  }
+
+  .close-instructions {
+    position: absolute;
+    cursor: pointer;
+    font-size: 60px;
+    top: -5px;
+    right: 30px;
+  }
+}

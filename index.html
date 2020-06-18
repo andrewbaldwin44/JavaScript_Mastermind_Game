@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/style/style.css">
+    <title>Mastermind</title>
+  </head>
+  <body>
+    <button id="open-instructions" class="open-instructions">Instructions</button>
+    <div id="instructions-overlay" class="instructions-overlay">
+      <div class="instructions-container">
+        <span id="close-instructions" class="red-text close-instructions">x</span>
+        <p class="instructions-content">
+          <p class="instructions-head">Let's Play Mastermind!</p>
+          The computer is the mastermind! They have created a top secret code
+          that you must crack.
+          You are the code breaker. You must use wits and strategy to break
+          the code! With each guess you make, hints are given as to how
+          close your guess was!
+          Your guess is made by placing four colored pegs on the board.
+          The mastermind will then give you colored clues:
+
+          <p class="red-text">A red clue:</p>
+          Each red clue means you have placed the correct color, and its in
+          the correct position!
+
+          <p class="green-text">A green clue:</p>
+          Each green clue means you have placed the correct color, but its not
+          in the correct position!
+
+          You have 10 turns to guess the code! If you guess the code before your
+          time runs out, you win!
+        </p>
+      </div>
+    </div>
+    <div id="master-code-container" class="master-code-container">
+    </div>
+    <div id="board" class="board">
+    </div>
+    <button class="make-guess" id="make-guess">Make guess</button>
+  </body>
+  <script type="text/javascript" src="lib/script/instructions.js"></script>
+  <script type="text/javascript" src="lib/script/peg.js"></script>
+  <script type="text/javascript" src="lib/script/board.js"></script>
+  <script type="text/javascript" src="bin/game.js"></script>
+</html>
