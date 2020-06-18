@@ -7,6 +7,7 @@ body {
   height: 90vh;
   margin-top: 5vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   background-color: #efebe9;
 }
 
@@ -171,24 +172,24 @@ body {
   color: green;
 }
 
-@media (max-height: 730px) {
+@media (max-width: 760px) {
   body {
-    font-size: 2em;
+    font-size: 0.8em;
+    height: 92vh;
   }
 
   .master-code-container {
-    justify-content: space-around;
-    height: 150px;
-    width: 600px;
-    margin: 80px 0;
-    padding: 0 10px;
+    justify-content: space-between;
+    width: 80vw;
+    height: 8vh;
+    margin: 10px 0;
+    padding: 10px 10px;
+    margin-bottom: 25px;
   }
 
   .master-code-peg {
-    font-size: 50px;
-    border-width: 3px;
-    width: 100px;
-    height: 100px;
+    font-size: 20px;
+
   }
 
   .board {
@@ -196,46 +197,33 @@ body {
     height: 70vh;
   }
 
-  .peg, .clue {
-    border-width: 3px;
-  }
-
-  .peg {
-    width: 50px;
-    height: 50px;
-  }
-
-  .clue {
-    width: 30px;
-    height: 30px;
-  }
-
   .open-instructions {
-    top: 20px;
-    font-size: 2em;
+    font-size: 1.2em;
+    top: 10px;
+    right: 5px;
   }
 
   .make-guess {
     font-size: 2em;
-    width: 50vw;
+    width: 80vw;
     height: 8vh;
-    margin-top: 80px;
+    margin-top: 25px;
+    padding: 0;
   }
 
   .instructions-container {
-    font-size: 34px;
-    line-height: 2;
+    font-size: 1.2em;
+    line-height: 1.2;
+    padding-top :5px;
   }
 
   .instructions-head {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .close-instructions {
-    position: absolute;
-    cursor: pointer;
-    font-size: 60px;
+    font-size: 1.6em;
     top: -5px;
-    right: 30px;
+    right: 8px;
   }
 }
