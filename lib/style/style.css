@@ -20,7 +20,7 @@ body {
   height: 80px;
   width: 300px;
   margin-bottom: 30px;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
 
 .master-code-peg {
@@ -64,17 +64,8 @@ body {
   width: 60%;
 }
 
-.pegs-container:disabled .peg {
+.disabled .peg {
   cursor: default;
-}
-
-.pegs-container:disabled {
-  cursor: none;
-}
-
-.pegsContainer:disabled {
-  background-color: purple;
-  cursor: none;
 }
 
 .clues-container {
@@ -139,29 +130,30 @@ body {
 }
 
 .instructions-container {
+  font-size: 1.2em;
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   z-index: 100;
   height: 80%;
   width: 90%;
   background-color: white;
   border: 10px solid black;
-  line-height: 1.4;
-  padding: 20px 20px;
+  line-height: 1.2;
+  padding: 10px 20px;
 }
 
 .instructions-head {
   text-decoration: underline;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .close-instructions {
   position: absolute;
   cursor: pointer;
-  font-size: 34px;
+  font-size: 1.4em;
   top: 0;
-  right: 10px;
+  right: 20px;
 }
 
 .red-text {
@@ -180,7 +172,7 @@ body {
 
   .master-code-container {
     justify-content: space-between;
-    width: 80vw;
+    width: 70vw;
     height: 8vh;
     margin: 10px 0;
     padding: 10px 10px;

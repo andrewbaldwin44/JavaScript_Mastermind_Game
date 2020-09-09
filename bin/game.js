@@ -23,8 +23,14 @@ function enableRow() {
   let previousRow = document.querySelector(`#pegs-row-${currentRowIndex - 1}`);
   let currentRow = document.querySelector(`#pegs-row-${currentRowIndex}`);
 
-  if (previousRow) previousRow.disabled = true;
-  if (currentRow) currentRow.disabled = false;
+  if (previousRow) {
+    previousRow.classList.add('disabled');
+    previousRow.disabled = true;
+  }
+  if (currentRow) {
+    currentRow.classList.remove('disabled');
+    currentRow.disabled = false;
+  }
 }
 
 function isGameWon(clues) {
